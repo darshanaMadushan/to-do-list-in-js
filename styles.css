@@ -1,0 +1,152 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    margin: 0;
+    text-align: center;
+}
+
+.top-bar {
+    background-color: rgba(250, 235, 215, 0.87);
+    visibility: visible;
+}
+
+.top-bar h1 {
+    padding: 2px;
+    margin: 2px;
+}
+
+header button {
+    width: 100px;
+    height: 50px;
+    background-color: blanchedalmond;
+    border: 1px solid burlywood;
+    font-weight: bold;
+    font-variant: small-caps;
+    cursor: pointer;
+}
+
+.login-signup-wrapper {
+    visibility: visible;
+}
+
+.sign-up,
+.login {
+    align-items: center;
+    margin-left: 40%;
+    margin-top: 50px;
+    visibility: hidden;
+    width: 500px;
+    height: 0;
+    display: block;
+}
+
+.row {
+    display: flex;
+    margin: 10px 10px 0 5px;
+    text-align: center;
+}
+
+.row-data {
+    width: 100px;
+}
+
+input[type=text],
+input[type=password] {
+    width: 150px;
+    height: 25px;
+}
+
+input[type=button],
+input[type=reset] {
+    width: 100px;
+    height: 40px;
+    margin: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type=button] {
+    background-color: rgba(0, 80, 0, 0.616);
+}
+
+input[type=reset] {
+    background-color: rgba(255, 78, 78, 0.863);
+}
+
+input[name=title] {
+    width: 500px;
+    height: 40px;
+}
+
+.margin {
+    margin-left: 40px;
+}
+
+.quit-from-upper-operations {
+    padding: 0;
+    margin: 25px;
+    margin-left: 50%;
+    visibility: hidden;
+}
+
+p#regWarning,
+p#logWarning {
+    color: red;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard {
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    visibility: hidden;
+}
+
+.addtodolist {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+table {
+    width: 70%;
+}
+
+.table-wrapper {
+    background-color: aliceblue;
+    align-items: stretch;
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+}
+
+table th:first-child {
+    width: 400px;
+    height: 45px;
+}
+
+table th {
+    width: 150px;
+    height: inherit;
+}
+
+table,
+th,
+tr,
+td {
+    border: 1px solid grey;
+    text-align: center;
+}
+
+td:hover {
+    background-color: dimgray;
+    color: whitesmoke;
+}
