@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css" />
+    <title>To-Do-List Manager</title>
+</head>
+
+<body>
+    <!-- Head and title of the page -->
+    <header>
+        <div class="top-bar" id="top-bar">
+            <h1>To-Do-Lists Manager</h1>
+            <p>This is a simple to-do-list manager built using client side Javascipt, CSS and HTML. <br/> You can add your to-do activities in list and it will remind you the works you have.First you have to sign in.</p>
+        </div>
+        <div class="buttons">
+            <button type="button" id="signup">Sign up</button>
+            <button type="button" id="loginButton">Log In</button>
+        </div>
+    </header>
+
+    <!-- login and signup forms -->
+    <div class="login-signup-wrapper" id="login-signup-content">
+        <!-- Signup content -->
+        <div class="sign-up" id="signup-form">
+            <h1>Sign Up In the service</h1>
+            <form method="POST">
+                <p id="regWarning"></p>
+                <div class="row">
+                    <div class="row-data">
+                        <label>First Name:</label>
+                    </div>
+                    <div class="row-data">
+                        <input type="text" required id="signFirstName" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row-data">
+                        <label>Last Name:</label>
+                    </div>
+                    <div class="row-data">
+                        <input type="text" required id="signLastName" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row-data">
+                        <label>Email:</label>
+                    </div>
+                    <div class="row-data">
+                        <input type="text" required id="signEmail" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row-data">
+                        <label>Password:</label>
+                    </div>
+                    <div class="row-data">
+                        <input type="password" required id="signPass" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <input type="checkbox" id="terms" required/>
+                    <label>I agree to the terms of use</label>
+                </div>
+
+                <div class="row">
+                    <div class="row-data">
+                        <input type="button" value="Register" id="register" />
+                    </div>
+                    <div class="row-data margin">
+                        <input type="reset" value="Reset details" />
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Login content of the page -->
+        <div class="login" id="login-form">
+            <h1>Log in the service</h1>
+            <form method="POST">
+                <p id="logWarning"></p>
+                <div class="row">
+                    <div class="row-data">
+                        <label>E-Mail: </label>
+                    </div>
+                    <div class="row-data">
+                        <input type="text" required id="email">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row-data">
+                        <label>Password: </label>
+                    </div>
+                    <div class="row-data">
+                        <input type="password" required id="password" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row-data">
+                        <input type="button" value="Login" id="login" />
+                    </div>
+                    <div class="row-data margin">
+                        <input type="reset" value="Reset details" />
+                    </div>
+                </div>
+            </form>
+        </div>
+        <!-- create a quit button for cancel the operations login || signup and come to default theme mode -->
+        <div class="quit-from-upper-operations" id="quit-from-upper-operations">
+            <input type="reset" value="Quit" />
+        </div>
+    </div>
+
+    <!-- dashboard of the user -->
+    <div class="dashboard" id="dashboard">
+        <h1>DarshBoard</h1>
+        <button onclick="logout()">Logout</button>
+        <h3 id="username"></h3>
+        <input type="button" onclick="OpenToDoListForm()" value="Add a to do">
+
+        <!-- form to add a todo  -->
+        <div class="addtodolist" id="addtodolist">
+            <form name="addtodo">
+                <input type="text" name="title" id="todo-title" placeholder="Add today tasks" required>
+                <input type="button" name="Addtodo" value="Add todo" onclick="checkAndAddTodo(toDoTable)" />
+                <input type="reset" name="Reset" />
+            </form>
+        </div>
+
+        <!-- representing todos -->
+        <div class="table-wrapper">
+            <table class="todoTable" id="toDoTable" name="todoTable">
+                <th>
+                    Task
+                </th>
+                <th>
+                    Mark as done
+                </th>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
